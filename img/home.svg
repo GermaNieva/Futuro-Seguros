@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g3" x1="0" x2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g3)"/>
+  <g fill="#fff" opacity="0.95">
+    <path d="M400 160 L200 320 H280 V460 H520 V320 H600 Z"/>
+  </g>
+  <text x="50%" y="88%" fill="#ffffff" font-size="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Seguro de Hogar</text>
+</svg>

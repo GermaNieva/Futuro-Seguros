@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+  Página: Aviso legal
+  Proyecto: Futuro Seguros
+  Descripción: Información legal del sitio.
+-->
+<html lang="es">
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso legal - Futuro Seguros</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Tailwind vía CDN (@tailwindcss/browser) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- Header: logo + navegación principal -->
+    <header class="flex items-center justify-between gap-4 sm:gap-8 px-4 sm:px-8 py-3 border-b-4 border-blue-500 relative z-50 bg-white">
+        <div class="flex items-center gap-2">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo" class="w-16 sm:w-20">
+            </a>
+            <h1 class="font-semibold text-lg sm:text-xl">Futuro Seguros</h1>
+        </div>
+
+        <nav class="relative">
+            <input id="nav-toggle" type="checkbox" class="peer sr-only" />
+
+            <ul class="hidden sm:flex items-center gap-8 py-2 text-lg font-semibold text-gray-600">
+                <li><a href="index.html" class="hover:text-blue-500">Inicio</a></li>
+                <li><a href="nosotros.html" class="hover:text-blue-500">Nosotros</a></li>
+                <li><a href="servicios.html" class="hover:text-blue-500">Servicios</a></li>
+                <li><a href="contacto.html" class="hover:text-blue-500">Contacto</a></li>
+            </ul>
+
+            <label for="nav-toggle" class="sm:hidden inline-flex items-center justify-center cursor-pointer p-2 rounded-lg hover:bg-gray-50 focus-within:bg-gray-50 select-none">
+                <img src="img/menu.png" alt="Abrir menú" class="w-10 h-10">
+            </label>
+
+            <ul class="sm:hidden absolute right-0 top-full mt-3 w-64 rounded-xl bg-white shadow-lg ring-1 ring-gray-200 overflow-hidden z-50 hidden peer-checked:block">
+                <li><a href="index.html" class="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 focus:bg-blue-50 focus:outline-none">Inicio</a></li>
+                <li><a href="nosotros.html" class="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 focus:bg-blue-50 focus:outline-none">Nosotros</a></li>
+                <li><a href="servicios.html" class="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 focus:bg-blue-50 focus:outline-none">Servicios</a></li>
+                <li><a href="contacto.html" class="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 focus:bg-blue-50 focus:outline-none">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main: contenido legal -->
+    <main class="px-8 py-16 max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Aviso legal</h1>
+        <p class="text-gray-700 mb-4">Este sitio web pertenece a Futuro Seguros. El uso del mismo implica la aceptación de las condiciones aquí descritas. Toda la información publicada tiene carácter orientativo y puede variar según la normativa vigente o las evaluaciones de riesgo realizadas por nuestros suscriptores.</p>
+        <p class="text-gray-700 mb-4">Los contenidos, marcas y materiales gráficos son propiedad de Futuro Seguros o cuentan con las licencias correspondientes. Queda prohibida su reproducción sin consentimiento por escrito.</p>
+        <p class="text-gray-700 mb-4">Para consultas legales o reclamos formales, podés escribirnos a <a href="mailto:legales@futuroseguros.com" class="text-blue-600 underline">legales@futuroseguros.com</a>.</p>
+    </main>
+
+    <!-- Footer: redes + links legales -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-8 py-8 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+            <div class="flex items-center gap-4">
+                <a href="#" class="flex items-center gap-3">
+                    <img src="img/logo.png" alt="Futuro Seguros" class="h-12 w-auto">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Futuro Seguros</h3>
+                        <p class="text-sm text-gray-600">Protección y confianza a tu alcance</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="flex gap-4 mb-2">
+                    <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" class="transform transition-transform duration-200 hover:scale-110">
+                        <img src="img/whatsapp.svg" alt="WhatsApp" class="w-8 h-8">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" class="transform transition-transform duration-200 hover:scale-110">
+                        <img src="img/instagram.svg" alt="Instagram" class="w-8 h-8">
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" class="transform transition-transform duration-200 hover:scale-110">
+                        <img src="img/facebook.svg" alt="Facebook" class="w-8 h-8">
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-sm text-gray-600">
+                <ul class="flex flex-col md:flex-row gap-2 md:gap-4">
+                    <li><a href="aviso-legal.html" class="hover:text-blue-500">Aviso legal</a></li>
+                    <li><a href="politica-privacidad.html" class="hover:text-blue-500">Política de privacidad</a></li>
+                    <li><a href="contacto.html" class="hover:text-blue-500">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-50 border-t border-gray-200 py-3">
+            <p class="text-center text-xs text-gray-500">&copy; 2025 Futuro Seguros. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

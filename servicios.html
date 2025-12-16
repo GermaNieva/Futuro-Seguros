@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!--
+  Página: Servicios
+  Proyecto: Futuro Seguros
+  Descripción: Catálogo/carrusel de planes y coberturas.
+-->
+<html lang="es">
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña -->
+    <title>Proyecto final</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Tailwind vía CDN (@tailwindcss/browser) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- Header: logo + navegación principal -->
+    <header class="flex items-center justify-between gap-4 sm:gap-8 px-4 sm:px-8 py-3 border-b-4 border-blue-500 relative z-50 bg-white">
+        <div class="flex items-center gap-2">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo" class="w-16 sm:w-20">
+            </a>
+            <h1 class="font-semibold text-lg sm:text-xl">Futuro Seguros</h1>
+        </div>
+
+        <nav class="relative">
+            <input id="nav-toggle" type="checkbox" class="peer sr-only" />
+
+            <ul class="hidden sm:flex items-center gap-8 py-2 text-lg font-semibold text-gray-600">
+                <li><a href="index.html" class="hover:text-blue-500">Inicio</a></li>
+                <li><a href="nosotros.html" class="hover:text-blue-500">Nosotros</a></li>
+                <li><a href="servicios.html" class="underline hover:text-blue-500" aria-current="page">Servicios</a></li>
+                <li><a href="contacto.html" class="hover:text-blue-500">Contacto</a></li>
+            </ul>
+
+            <label for="nav-toggle" class="sm:hidden inline-flex items-center justify-center cursor-pointer p-2 rounded-lg hover:bg-gray-50 focus-within:bg-gray-50 select-none">
+                <img src="img/menu.png" alt="Abrir menú" class="w-10 h-10">
+            </label>
+
+            <ul class="sm:hidden absolute right-0 top-full mt-3 w-64 rounded-xl bg-white shadow-lg ring-1 ring-gray-200 overflow-hidden z-50 hidden peer-checked:block">
+                <li><a href="index.html" class="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 focus:bg-blue-50 focus:outline-none">Inicio</a></li>
+                <li><a href="nosotros.html" class="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 focus:bg-blue-50 focus:outline-none">Nosotros</a></li>
+                <li><a href="servicios.html" class="block px-5 py-3 text-blue-700 bg-blue-50 font-semibold" aria-current="page">Servicios</a></li>
+                <li><a href="contacto.html" class="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 focus:bg-blue-50 focus:outline-none">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main: catálogo de planes -->
+    <main class="px-6 md:px-10 py-12">
+        <section class="max-w-4xl mx-auto text-center mb-10">
+            <p class="uppercase text-xs tracking-[0.35em] text-blue-500 font-semibold">Catalogo</p>
+            <h1 class="font-semibold text-3xl text-gray-800 mt-3">Nuestros planes</h1>
+            <p class="text-gray-600 mt-4">Desliza lateralmente para descubrir todas las coberturas: autos, motos, hogar, vida y salud.</p>
+        </section>
+
+        <section class="max-w-6xl mx-auto">
+            <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                <span class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-blue-500"></span> Arrastra para cambiar</span>
+                <span class="hidden sm:flex items-center gap-1">‹ desliza ›</span>
+            </div>
+            <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-10 no-scrollbar" aria-label="Carrusel de coberturas">
+                <!-- Autos -->
+                <article id="tarjauto" class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-blue-500 rounded-2xl p-6 shadow-lg transition-transform duration-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center">
+                                <img src="img/car.svg" alt="Ícono seguro auto" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-blue-500 uppercase">Auto</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Terceros Completo</h2>
+                        <p class="text-sm text-gray-600 mt-2">Cobertura económica para circular tranquilo en la ciudad.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Responsabilidad civil $50M</li>
+                            <li>• Asistencia en viaje 24/7</li>
+                            <li>• Grúa hasta 300 km</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $12.500/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Auto%20-%20Terceros%20Completo.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600">Contratar</a>
+                    </div>
+                </article>
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-blue-400 rounded-2xl p-6 shadow-lg transition-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center">
+                                <img src="img/car.svg" alt="Ícono seguro auto" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-blue-400 uppercase">Auto</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Todo Riesgo</h2>
+                        <p class="text-sm text-gray-600 mt-2">Incluye daños propios, robo total/parcial y cristales.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Valor a nuevo 12 meses</li>
+                            <li>• Auto de reemplazo</li>
+                            <li>• Asistencia legal</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $24.900/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Auto%20-%20Todo%20Riesgo.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600">Contratar</a>
+                    </div>
+                </article>
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-indigo-400 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-indigo-50 flex items-center justify-center">
+                                <img src="img/car.svg" alt="Ícono seguro auto" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-indigo-400 uppercase">Auto</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Premium Black</h2>
+                        <p class="text-sm text-gray-600 mt-2">Atención concierge para vehículos de alta gama.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Franquicia flexible</li>
+                            <li>• Conductor reemplazo</li>
+                            <li>• Taller certificado</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $39.800/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Auto%20-%20Premium%20Black.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600">Contratar</a>
+                    </div>
+                </article>
+
+                <!-- Motos -->
+                <article class=" group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-emerald-400 rounded-2xl p-6 shadow-lg transition-transform duration-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-emerald-50 flex items-center justify-center">
+                                <svg viewBox="0 0 64 32" class="h-8 w-8 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="18" cy="24" r="8"/>
+                                    <circle cx="46" cy="24" r="8"/>
+                                    <path d="M18 24l10-12h10l8 12M26 12l-6-6"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-emerald-400 uppercase">Moto</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Moto Diario</h2>
+                        <p class="text-sm text-gray-600 mt-2">Ideal para motos urbanas de hasta 250cc.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Responsabilidad civil</li>
+                            <li>• Auxilio mecánico</li>
+                            <li>• Cobertura de casco</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $5.200/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Moto%20-%20Moto%20Diario.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-emerald-500 hover:bg-emerald-600">Contratar</a>
+                    </div>
+                </article>
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-emerald-500 rounded-2xl p-6 shadow-lg transition-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-emerald-50 flex items-center justify-center">
+                                <svg viewBox="0 0 64 32" class="h-8 w-8 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="18" cy="24" r="8"/>
+                                    <circle cx="46" cy="24" r="8"/>
+                                    <path d="M18 24l10-12h10l8 12M26 12l-6-6"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-emerald-500 uppercase">Moto</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Moto Touring</h2>
+                        <p class="text-sm text-gray-600 mt-2">Cobertura extendida para viajes largos.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Robo total y parcial</li>
+                            <li>• Hospedaje por avería</li>
+                            <li>• Repuestos originales</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $9.700/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Moto%20-%20Moto%20Touring.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-emerald-500 hover:bg-emerald-600">Contratar</a>
+                    </div>
+                </article>
+                <article id="tarjmoto" class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-teal-400 rounded-2xl p-6 shadow-lg transition-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center">
+                                <svg viewBox="0 0 64 32" class="h-8 w-8 text-teal-500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="18" cy="24" r="8"/>
+                                    <circle cx="46" cy="24" r="8"/>
+                                    <path d="M18 24l10-12h10l8 12M26 12l-6-6"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-teal-400 uppercase">Moto</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Moto Premium</h2>
+                        <p class="text-sm text-gray-600 mt-2">Pensado para motos de alta cilindrada.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Valor asegurado a nuevo</li>
+                            <li>• Cobertura de equipamiento</li>
+                            <li>• Reintegro por eventos</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $14.800/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Moto%20-%20Moto%20Premium.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-emerald-500 hover:bg-emerald-600">Contratar</a>
+                    </div>
+                </article>
+
+                <!-- Hogar -->
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-orange-400 rounded-2xl p-6 shadow-lg transition-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-orange-50 flex items-center justify-center">
+                                <img src="img/home.svg" alt="Ícono seguro hogar" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-orange-400 uppercase">Hogar</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Hogar Start</h2>
+                        <p class="text-sm text-gray-600 mt-2">Protección básica para departamentos pequeños.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Incendio y humo</li>
+                            <li>• Robo de contenido</li>
+                            <li>• Cerraduras de emergencia</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $7.900/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Hogar%20-%20Hogar%20Start.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600">Contratar</a>
+                    </div>
+                </article>
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-orange-500 rounded-2xl p-6 shadow-lg transition-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-orange-50 flex items-center justify-center">
+                                <img src="img/home.svg" alt="Ícono seguro hogar" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-orange-500 uppercase">Hogar</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Hogar Plus</h2>
+                        <p class="text-sm text-gray-600 mt-2">Cobertura ampliada para casa familiar.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Daños por agua</li>
+                            <li>• Cristales y electrodomésticos</li>
+                            <li>• RC linderos</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $11.900/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Hogar%20-%20Hogar%20Plus.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600">Contratar</a>
+                    </div>
+                </article>
+                <article id="tarjcasa" class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-amber-400 rounded-2xl p-6 shadow-lg transition-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-amber-50 flex items-center justify-center">
+                                <img src="img/home.svg" alt="Ícono seguro hogar" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-amber-400 uppercase">Hogar</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Hogar Premium</h2>
+                        <p class="text-sm text-gray-600 mt-2">Incluye alquiler temporario y asistencia hogar.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Daños estructurales</li>
+                            <li>• Asistencia 24/7</li>
+                            <li>• Cobertura jardín/pileta</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $16.300/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Hogar%20-%20Hogar%20Premium.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600">Contratar</a>
+                    </div>
+                </article>
+
+                <!-- Vida -->
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-pink-300 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-pink-50 flex items-center justify-center">
+                                <img src="img/life.svg" alt="Ícono seguro vida" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-pink-400 uppercase">Vida</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Vida Inicial</h2>
+                        <p class="text-sm text-gray-600 mt-2">Plan accesible para individuos jóvenes.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Capital $5M</li>
+                            <li>• Doble indemnización ACC</li>
+                            <li>• Telemedicina</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $3.800/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Vida%20-%20Vida%20Inicial.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-pink-500 hover:bg-pink-600">Contratar</a>
+                    </div>
+                </article>
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-pink-500 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-pink-50 flex items-center justify-center">
+                                <img src="img/life.svg" alt="Ícono seguro vida" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-pink-500 uppercase">Vida</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Vida Familiar</h2>
+                        <p class="text-sm text-gray-600 mt-2">Cobertura integral para proteger ingresos del hogar.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Capital $12M</li>
+                            <li>• Inclusión de cónyuge</li>
+                            <li>• Servicio de sepelio</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $7.100/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Vida%20-%20Vida%20Familiar.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-pink-500 hover:bg-pink-600">Contratar</a>
+                    </div>
+                </article>
+                <article id="tarjvida" class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-rose-400 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-rose-50 flex items-center justify-center">
+                                <img src="img/life.svg" alt="Ícono seguro vida" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-rose-400 uppercase">Vida</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Vida Patrimonial</h2>
+                        <p class="text-sm text-gray-600 mt-2">Suma asegurada elevada con ahorro y retiro.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Capital $25M</li>
+                            <li>• Rescate a 10 años</li>
+                            <li>• Beneficios fiscales</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $15.900/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Vida%20-%20Vida%20Patrimonial.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-pink-500 hover:bg-pink-600">Contratar</a>
+                    </div>
+                </article>
+
+                <!-- Salud -->
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-purple-300 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-purple-50 flex items-center justify-center">
+                                <img src="img/health.svg" alt="Ícono plan de salud" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-purple-400 uppercase">Salud</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Plan Esencial</h2>
+                        <p class="text-sm text-gray-600 mt-2">Consultas ilimitadas y acceso a guardias 24hs.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Copagos bajos</li>
+                            <li>• Laboratorios incluidos</li>
+                            <li>• Telemedicina</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $18.200/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Salud%20-%20Plan%20Esencial.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-purple-500 hover:bg-purple-600">Contratar</a>
+                    </div>
+                </article>
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-purple-500 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-purple-50 flex items-center justify-center">
+                                <img src="img/health.svg" alt="Ícono plan de salud" class="h-8 w-8">
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-purple-500 uppercase">Salud</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Plan Integral</h2>
+                        <p class="text-sm text-gray-600 mt-2">Internaciones, maternidad y reintegros rápidos.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Habitaciones privadas</li>
+                            <li>• Cobertura odontológica</li>
+                            <li>• Óptica anual</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $27.400/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Salud%20-%20Plan%20Integral.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-purple-500 hover:bg-purple-600">Contratar</a>
+                    </div>
+                </article>
+                <article id="planesalud" class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-indigo-500 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="h-12 w-12 rounded-full bg-indigo-50 flex items-center justify-center">
+                                    <img src="img/health.svg" alt="Ícono plan de salud" class="h-8 w-8">
+                                </div>
+                                <p class="text-xs font-semibold tracking-[0.3em] text-indigo-500 uppercase">Salud</p>
+                            </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Plan Élite</h2>
+                        <p class="text-sm text-gray-600 mt-2">Cobertura internacional con reintegros premium.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Cobertura mundial</li>
+                            <li>• Segunda opinión</li>
+                            <li>• Concierge médico</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $39.900/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Salud%20-%20Plan%20%C3%89lite.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-purple-500 hover:bg-purple-600">Contratar</a>
+                    </div>
+                </article>
+
+                <!-- Comercial -->
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-slate-400 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-slate-100 flex items-center justify-center">
+                                <svg viewBox="0 0 48 48" class="h-8 w-8 text-slate-600" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="10" y="8" width="28" height="32" rx="2"/>
+                                    <path d="M18 16h6M30 16h4M18 24h6M30 24h4M18 32h16"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-slate-500 uppercase">Comercio</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Local Esencial</h2>
+                        <p class="text-sm text-gray-600 mt-2">Protección básica para pequeños locales o kioscos.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Incendio continente</li>
+                            <li>• Robo de mercadería</li>
+                            <li>• RC clientes</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $13.500/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Comercio%20-%20Local%20Esencial.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-slate-600 hover:bg-slate-700">Contratar</a>
+                    </div>
+                </article>
+                <article class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-slate-500 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-slate-100 flex items-center justify-center">
+                                <svg viewBox="0 0 48 48" class="h-8 w-8 text-slate-600" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="10" y="8" width="28" height="32" rx="2"/>
+                                    <path d="M18 16h6M30 16h4M18 24h6M30 24h4M18 32h16"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-slate-600 uppercase">Comercio</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">PyME Plus</h2>
+                        <p class="text-sm text-gray-600 mt-2">Cobertura para oficinas y depósitos medianos.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Daños por agua</li>
+                            <li>• Rotura de maquinaria</li>
+                            <li>• Gastos fijos</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $22.800/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Comercio%20-%20PyME%20Plus.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-slate-600 hover:bg-slate-700">Contratar</a>
+                    </div>
+                </article>
+                <article id="planescomercio" class="group flex-shrink-0 w-[280px] snap-center">
+                    <div class="h-full bg-white border-t-4 border-neutral-500 rounded-2xl p-6 shadow-lg transición-transform duración-300 [transform-style:preserve-3d] [perspective:1200px] group-hover:[transform:rotateY(-6deg)]">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-12 w-12 rounded-full bg-neutral-100 flex items-center justify-center">
+                                <svg viewBox="0 0 48 48" class="h-8 w-8 text-neutral-600" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="10" y="8" width="28" height="32" rx="2"/>
+                                    <path d="M18 16h6M30 16h4M18 24h6M30 24h4M18 32h16"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-semibold tracking-[0.3em] text-neutral-600 uppercase">Comercio</p>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800 mt-2">Industria Total</h2>
+                        <p class="text-sm text-gray-600 mt-2">Plan integral para grandes naves industriales.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600">
+                            <li>• Interrupción de negocio</li>
+                            <li>• RC patronal</li>
+                            <li>• Equipos electrónicos</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-semibold text-gray-800">Desde $41.700/mes</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20contratar%20Comercio%20-%20Industria%20Total.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-white bg-slate-600 hover:bg-slate-700">Contratar</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <style>
+    .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-8 py-8 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+            <div class="flex items-center gap-4">
+                <a href="#" class="flex items-center gap-3">
+                    <img src="img/logo.png" alt="Futuro Seguros" class="h-12 w-auto">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Futuro Seguros</h3>
+                        <p class="text-sm text-gray-600">Protección y confianza a tu alcance</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="flex gap-4 mb-2">
+                    <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" class="transform transition-transform duration-200 hover:scale-110">
+                        <img src="img/whatsapp.svg" alt="WhatsApp" class="w-8 h-8">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" class="transform transition-transform duration-200 hover:scale-110">
+                        <img src="img/instagram.svg" alt="Instagram" class="w-8 h-8">
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" class="transform transition-transform duration-200 hover:scale-110">
+                        <img src="img/facebook.svg" alt="Facebook" class="w-8 h-8">
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-sm text-gray-600">
+                <ul class="flex flex-col md:flex-row gap-2 md:gap-4">
+                    <li><a href="aviso-legal.html" class="hover:text-blue-500">Aviso legal</a></li>
+                    <li><a href="politica-privacidad.html" class="hover:text-blue-500">Política de privacidad</a></li>
+                    <li><a href="contacto.html" class="hover:text-blue-500">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-50 border-t border-gray-200 py-3">
+            <p class="text-center text-xs text-gray-500">&copy; 2025 Futuro Seguros. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
